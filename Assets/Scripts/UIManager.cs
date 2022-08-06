@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
 
     public Text pointText;
+    public Text finallyPoints;
     public Text maxScoreText;
     private int points;
     private int maxScore;
@@ -15,12 +16,14 @@ public class UIManager : MonoBehaviour
     {
         maxScore = PlayerPrefs.GetInt("maxscore", 0);
         pointText.text = "0";
+        finallyPoints.text = "0";
         maxScoreText.text = "Record: " + maxScore;
     }
 
     public void AddPoint(){
         points += 1;
         pointText.text = "" + points;
+        finallyPoints.text = "Puntos :" + points;
         if(maxScore < points){
             PlayerPrefs.SetInt("maxscore", points);
             maxScoreText.text = "Record :" + points;
