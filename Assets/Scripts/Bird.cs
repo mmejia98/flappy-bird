@@ -7,6 +7,7 @@ public class Bird : MonoBehaviour
 {
     //velocidad del pajaro
     public float speed = 5f;
+    public AudioBG audioBG;
     //fuerza de salto del pajaro
     public float force = 300;
     public GameObject gameOver;
@@ -46,6 +47,7 @@ public class Bird : MonoBehaviour
         //reiniciar nivel
         if(collision.gameObject.tag == "Finish"){
             gameEnd = true;
+            audioBG.StopMusic();
             gameOver.SetActive(true);
         };
     }
