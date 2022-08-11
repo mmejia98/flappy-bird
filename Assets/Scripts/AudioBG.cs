@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioBG : MonoBehaviour
 {
 
-    public AudioClip[] audios;
+    //public AudioClip[] audios;
     private AudioSource audio;
 
     void Start(){
@@ -14,8 +14,8 @@ public class AudioBG : MonoBehaviour
     }
 
     public void StartMusic(){
-        int numAudio = Random.Range(0, 9); 
-        audio.clip = audios[numAudio];
+        //int numAudio = Random.Range(0, 9); 
+        //audio.clip = audios[numAudio];
         audio.Play();
     }
 
